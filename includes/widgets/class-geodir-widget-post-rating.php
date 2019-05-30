@@ -177,7 +177,7 @@ class GeoDir_Widget_Post_Rating extends WP_Super_Duper {
         global $post;
         ob_start();
         ?>
-        <span class="gd-list-rating-stars">
+        <div class="gd-list-rating-stars">
            <?php
            if ( ! empty( $post->post_type ) && geodir_cpt_has_rating_disabled( $post->post_type ) ) {
                echo '<i class="fas fa-comments" aria-hidden="true"></i>';
@@ -192,7 +192,7 @@ class GeoDir_Widget_Post_Rating extends WP_Super_Duper {
                echo geodir_get_rating_stars( $post_rating, $post->ID );
            }
            ?>
-        </span>
+        </div>
         <?php
         return ob_get_clean();
     }
